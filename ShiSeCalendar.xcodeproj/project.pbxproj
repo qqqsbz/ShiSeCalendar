@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86F084D18093D36ED4FA8926 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28053F9F1FCCB4A41183E050 /* libPods.a */; };
+		DCDE9DCD1BA031D3007FB721 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE9DCC1BA031D3007FB721 /* main.m */; };
+		DCDE9DD01BA031D3007FB721 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE9DCF1BA031D3007FB721 /* AppDelegate.m */; };
+		DCDE9DD31BA031D3007FB721 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE9DD21BA031D3007FB721 /* ViewController.m */; };
+		DCDE9DD61BA031D4007FB721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDE9DD41BA031D4007FB721 /* Main.storyboard */; };
+		DCDE9DD81BA031D4007FB721 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCDE9DD71BA031D4007FB721 /* Images.xcassets */; };
+		DCDE9DDB1BA031D4007FB721 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDE9DD91BA031D4007FB721 /* LaunchScreen.xib */; };
+		DCDE9DE71BA031D4007FB721 /* ShiSeCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE9DE61BA031D4007FB721 /* ShiSeCalendarTests.m */; };
+		DCDE9DF41BA031F3007FB721 /* CalendarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE9DF11BA031F3007FB721 /* CalendarItem.m */; };
+		DCDE9DF51BA031F3007FB721 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDE9DF31BA031F3007FB721 /* CalendarView.m */; };
+		DCDE9DF71BA031FC007FB721 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DCDE9DF61BA031FC007FB721 /* Podfile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCDE9DE11BA031D4007FB721 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCDE9DBF1BA031D3007FB721 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCDE9DC61BA031D3007FB721;
+			remoteInfo = ShiSeCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28053F9F1FCCB4A41183E050 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66327E3C7C22E9D64006707E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9FD97990EB8EA6E3DA8933C8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DCDE9DC71BA031D3007FB721 /* ShiSeCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiSeCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCDE9DCB1BA031D3007FB721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCDE9DCC1BA031D3007FB721 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCDE9DCE1BA031D3007FB721 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCDE9DCF1BA031D3007FB721 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCDE9DD11BA031D3007FB721 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DCDE9DD21BA031D3007FB721 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DCDE9DD51BA031D4007FB721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCDE9DD71BA031D4007FB721 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCDE9DDA1BA031D4007FB721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DCDE9DE01BA031D4007FB721 /* ShiSeCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiSeCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCDE9DE51BA031D4007FB721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCDE9DE61BA031D4007FB721 /* ShiSeCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiSeCalendarTests.m; sourceTree = "<group>"; };
+		DCDE9DF01BA031F3007FB721 /* CalendarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarItem.h; sourceTree = "<group>"; };
+		DCDE9DF11BA031F3007FB721 /* CalendarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarItem.m; sourceTree = "<group>"; };
+		DCDE9DF21BA031F3007FB721 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		DCDE9DF31BA031F3007FB721 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		DCDE9DF61BA031FC007FB721 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCDE9DC41BA031D3007FB721 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F084D18093D36ED4FA8926 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCDE9DDD1BA031D4007FB721 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC2509EBC237065BD6387800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28053F9F1FCCB4A41183E050 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCDE9DBE1BA031D3007FB721 = {
+			isa = PBXGroup;
+			children = (
+				DCDE9DF61BA031FC007FB721 /* Podfile */,
+				DCDE9DC91BA031D3007FB721 /* ShiSeCalendar */,
+				DCDE9DE31BA031D4007FB721 /* ShiSeCalendarTests */,
+				DCDE9DC81BA031D3007FB721 /* Products */,
+				EC03A9E2D188258FFC898BEF /* Pods */,
+				DC2509EBC237065BD6387800 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DCDE9DC81BA031D3007FB721 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE9DC71BA031D3007FB721 /* ShiSeCalendar.app */,
+				DCDE9DE01BA031D4007FB721 /* ShiSeCalendarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCDE9DC91BA031D3007FB721 /* ShiSeCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE9DF01BA031F3007FB721 /* CalendarItem.h */,
+				DCDE9DF11BA031F3007FB721 /* CalendarItem.m */,
+				DCDE9DF21BA031F3007FB721 /* CalendarView.h */,
+				DCDE9DF31BA031F3007FB721 /* CalendarView.m */,
+				DCDE9DCE1BA031D3007FB721 /* AppDelegate.h */,
+				DCDE9DCF1BA031D3007FB721 /* AppDelegate.m */,
+				DCDE9DD11BA031D3007FB721 /* ViewController.h */,
+				DCDE9DD21BA031D3007FB721 /* ViewController.m */,
+				DCDE9DD41BA031D4007FB721 /* Main.storyboard */,
+				DCDE9DD71BA031D4007FB721 /* Images.xcassets */,
+				DCDE9DD91BA031D4007FB721 /* LaunchScreen.xib */,
+				DCDE9DCA1BA031D3007FB721 /* Supporting Files */,
+			);
+			path = ShiSeCalendar;
+			sourceTree = "<group>";
+		};
+		DCDE9DCA1BA031D3007FB721 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE9DCB1BA031D3007FB721 /* Info.plist */,
+				DCDE9DCC1BA031D3007FB721 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCDE9DE31BA031D4007FB721 /* ShiSeCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE9DE61BA031D4007FB721 /* ShiSeCalendarTests.m */,
+				DCDE9DE41BA031D4007FB721 /* Supporting Files */,
+			);
+			path = ShiSeCalendarTests;
+			sourceTree = "<group>";
+		};
+		DCDE9DE41BA031D4007FB721 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE9DE51BA031D4007FB721 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC03A9E2D188258FFC898BEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66327E3C7C22E9D64006707E /* Pods.debug.xcconfig */,
+				9FD97990EB8EA6E3DA8933C8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCDE9DC61BA031D3007FB721 /* ShiSeCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCDE9DEA1BA031D4007FB721 /* Build configuration list for PBXNativeTarget "ShiSeCalendar" */;
+			buildPhases = (
+				73F4C74D539504D17B423817 /* Check Pods Manifest.lock */,
+				DCDE9DC31BA031D3007FB721 /* Sources */,
+				DCDE9DC41BA031D3007FB721 /* Frameworks */,
+				DCDE9DC51BA031D3007FB721 /* Resources */,
+				314E5FF6ACFE50ABF5DE8395 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShiSeCalendar;
+			productName = ShiSeCalendar;
+			productReference = DCDE9DC71BA031D3007FB721 /* ShiSeCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCDE9DDF1BA031D4007FB721 /* ShiSeCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCDE9DED1BA031D4007FB721 /* Build configuration list for PBXNativeTarget "ShiSeCalendarTests" */;
+			buildPhases = (
+				DCDE9DDC1BA031D4007FB721 /* Sources */,
+				DCDE9DDD1BA031D4007FB721 /* Frameworks */,
+				DCDE9DDE1BA031D4007FB721 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCDE9DE21BA031D4007FB721 /* PBXTargetDependency */,
+			);
+			name = ShiSeCalendarTests;
+			productName = ShiSeCalendarTests;
+			productReference = DCDE9DE01BA031D4007FB721 /* ShiSeCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCDE9DBF1BA031D3007FB721 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = coder;
+				TargetAttributes = {
+					DCDE9DC61BA031D3007FB721 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					DCDE9DDF1BA031D4007FB721 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = DCDE9DC61BA031D3007FB721;
+					};
+				};
+			};
+			buildConfigurationList = DCDE9DC21BA031D3007FB721 /* Build configuration list for PBXProject "ShiSeCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCDE9DBE1BA031D3007FB721;
+			productRefGroup = DCDE9DC81BA031D3007FB721 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCDE9DC61BA031D3007FB721 /* ShiSeCalendar */,
+				DCDE9DDF1BA031D4007FB721 /* ShiSeCalendarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCDE9DC51BA031D3007FB721 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDE9DD61BA031D4007FB721 /* Main.storyboard in Resources */,
+				DCDE9DDB1BA031D4007FB721 /* LaunchScreen.xib in Resources */,
+				DCDE9DF71BA031FC007FB721 /* Podfile in Resources */,
+				DCDE9DD81BA031D4007FB721 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCDE9DDE1BA031D4007FB721 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		314E5FF6ACFE50ABF5DE8395 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73F4C74D539504D17B423817 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCDE9DC31BA031D3007FB721 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDE9DD31BA031D3007FB721 /* ViewController.m in Sources */,
+				DCDE9DD01BA031D3007FB721 /* AppDelegate.m in Sources */,
+				DCDE9DF41BA031F3007FB721 /* CalendarItem.m in Sources */,
+				DCDE9DCD1BA031D3007FB721 /* main.m in Sources */,
+				DCDE9DF51BA031F3007FB721 /* CalendarView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCDE9DDC1BA031D4007FB721 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCDE9DE71BA031D4007FB721 /* ShiSeCalendarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCDE9DE21BA031D4007FB721 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCDE9DC61BA031D3007FB721 /* ShiSeCalendar */;
+			targetProxy = DCDE9DE11BA031D4007FB721 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCDE9DD41BA031D4007FB721 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCDE9DD51BA031D4007FB721 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCDE9DD91BA031D4007FB721 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCDE9DDA1BA031D4007FB721 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCDE9DE81BA031D4007FB721 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DCDE9DE91BA031D4007FB721 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCDE9DEB1BA031D4007FB721 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66327E3C7C22E9D64006707E /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShiSeCalendar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DCDE9DEC1BA031D4007FB721 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FD97990EB8EA6E3DA8933C8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShiSeCalendar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DCDE9DEE1BA031D4007FB721 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShiSeCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShiSeCalendar.app/ShiSeCalendar";
+			};
+			name = Debug;
+		};
+		DCDE9DEF1BA031D4007FB721 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShiSeCalendarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShiSeCalendar.app/ShiSeCalendar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCDE9DC21BA031D3007FB721 /* Build configuration list for PBXProject "ShiSeCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCDE9DE81BA031D4007FB721 /* Debug */,
+				DCDE9DE91BA031D4007FB721 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCDE9DEA1BA031D4007FB721 /* Build configuration list for PBXNativeTarget "ShiSeCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCDE9DEB1BA031D4007FB721 /* Debug */,
+				DCDE9DEC1BA031D4007FB721 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCDE9DED1BA031D4007FB721 /* Build configuration list for PBXNativeTarget "ShiSeCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCDE9DEE1BA031D4007FB721 /* Debug */,
+				DCDE9DEF1BA031D4007FB721 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCDE9DBF1BA031D3007FB721 /* Project object */;
+}
