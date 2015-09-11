@@ -20,13 +20,19 @@
 
 @interface CalendarView : UIScrollView<UIScrollViewDelegate>
 
-@property (weak, nonatomic) id<CalendarViewDelegate> calendarDelegate;
+@property (weak,   nonatomic) id<CalendarViewDelegate> calendarDelegate;
+
+@property (strong, nonatomic) UIImage *placeholderImage;
 
 - (void)lastMonth;
 
 - (void)nextMonth;
 
 - (void)today;
+
+- (void)clearMemory;
+
+- (void)clearImageFromMenoryWithKey:(NSString *)key;
 
 @end
 

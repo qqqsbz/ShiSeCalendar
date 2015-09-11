@@ -11,7 +11,9 @@
 
 @interface CalendarItem : UIView
 
-@property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) NSDate  *date;
+
+@property (strong, nonatomic) UIImage *placeholderImage;
 
 @property (nonatomic, copy) void(^calendarBlock)(NSDate *);
 

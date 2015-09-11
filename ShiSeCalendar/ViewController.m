@@ -22,10 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
     self.calendarView.calendarDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
+    [self.calendarView clearMemory];
     [super didReceiveMemoryWarning];
 }
 
@@ -46,6 +48,7 @@
 - (void)calendarViewImageUrls:(CalendarItem *)calendarItem
 {
     //TODO 若需要缓存数据 需自己在此进行缓存
+    //TODO 日历图片默认缓存到内存  如需清零内存缓存 请调用该方法 clearMemory
     
     NSDictionary *dic = @{
                           [self key]:@"http://img4.duitang.com/uploads/item/201307/19/20130719142617_aVfTJ.jpeg",

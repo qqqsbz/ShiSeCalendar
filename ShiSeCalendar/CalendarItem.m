@@ -176,7 +176,7 @@
     
     NSDateComponents *comp = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self.date];
     
-    NSString *dateString = [NSString stringWithFormat:@"%ld-%ld-%d",(long)[comp year],(long)[comp month],day];
+    NSString *dateString = [NSString stringWithFormat:@"%ld-%ld-%ld",(long)[comp year],(long)[comp month],day];
     NSDateFormatter* formater = [[NSDateFormatter alloc] init];
     [formater setDateFormat:@"yyyy-MM-dd"];
     [formater setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
@@ -249,12 +249,22 @@
                 
                 if (url.scheme && url.host) {
                     
-                    UIImageView *imageView = btn.imageView;
-                    [imageView sd_setImageWithURL:[NSURL URLWithString:value] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                        if (!error) {
-                            [btn setImage:image forState:UIControlStateNormal];
-                        }
-                    }];
+                    SDImageCache *imageCache = [SDImageCache sharedImageCache];
+                    UIImage *cacheImage = [imageCache imageFromMemoryCacheForKey:value];
+                    
+                    if (cacheImage) {
+                        [btn setImage:cacheImage forState:UIControlStateNormal];
+                    } else {
+                        UIImageView *imageView = btn.imageView;
+                        
+                        [imageView sd_setImageWithURL:[NSURL URLWithString:value] placeholderImage:self.placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                        
+                            if (!error) {
+                                [btn setImage:image forState:UIControlStateNormal];
+                                [imageCache storeImage:image forKey:value toDisk:NO];
+                            }
+                        }];
+                    }
                     
                 } else {
                     [btn setImage:[UIImage imageNamed:value] forState:UIControlStateNormal];

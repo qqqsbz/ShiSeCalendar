@@ -7,6 +7,7 @@
 //
 
 #import "CalendarView.h"
+#import <SDImageCache.h>
 @interface CalendarView()
 
 @property (assign, nonatomic) NSInteger  lastIndex;
@@ -49,14 +50,15 @@
     for (NSInteger i = 0; i < 3; i ++) {
         
         CalendarItem *calendarItem = [[CalendarItem alloc] initWithFrame:CGRectMake(width * i, 0, width, height)];
-        calendarItem.date  =  i == 0 ? [calendarItem lastMonth:date] :
-                              i == 1 ? date : [calendarItem nextMonth:date];
         
-        calendarItem.calendarBlock =  ^(NSDate *date){
+        calendarItem.date      =  i == 0 ? [calendarItem lastMonth:date] :
+                                  i == 1 ? date : [calendarItem nextMonth:date];
+        
+        calendarItem.placeholderImage = self.placeholderImage;
+        calendarItem.calendarBlock    =  ^(NSDate *date){
             if ([self.calendarDelegate respondsToSelector:@selector(calendarViewDidSelectWithDate:)]) {
                 [self.calendarDelegate calendarViewDidSelectWithDate:date];
             }
-           
         };
         [self addSubview:calendarItem];
     }
@@ -174,6 +176,19 @@
     CalendarItem *item = [self.subviews objectAtIndex:1];
     self.contentOffset = CGPointMake(item.frame.origin.x, item.frame.origin.y);
     [self scrollViewDidEndDecelerating:self];
+}
+
+
+- (void)clearMemory
+{
+    SDImageCache *imageCache = [SDImageCache sharedImageCache];
+    [imageCache clearMemory];
+}
+
+- (void)clearImageFromMenoryWithKey:(NSString *)key
+{
+    SDImageCache *imageCache = [SDImageCache sharedImageCache];
+    [imageCache removeImageForKey:key];
 }
 
 - (void)loadData:(CalendarItem *)item
