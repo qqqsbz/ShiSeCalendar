@@ -27,7 +27,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark -- CalendarViewDelegate
@@ -46,25 +45,21 @@
 
 - (void)calendarViewImageUrls:(CalendarItem *)calendarItem
 {
+    //TODO 若需要缓存数据 需自己在此进行缓存
     
-    //NSArray *array      = [[NSString stringWithFormat:@"%@",calendarItem.date] componentsSeparatedByString:@"-"];
-    //NSString *month     = array[1];
-    //NSString *imageName = @"info-cover.jpg";
-    NSDictionary *dic;
-    
-    dic = @{
-            [self key]:@"http://img4.duitang.com/uploads/item/201307/19/20130719142617_aVfTJ.jpeg",
-            [self key]:@"http://img3.imgtn.bdimg.com/it/u=625926037,4267740504&fm=21&gp=0.jpg",
-            [self key]:@"http://android-wallpapers.25pp.com/20140321/0905/532b9083025e512_900x675.jpg",
-            [self key]:@"http://pic21.nipic.com/20120523/6135725_215324580118_2.jpg",
-            [self key]:@"http://photos.tuchong.com/25331/f/1715842.jpg",
-            [self key]:@"http://android-wallpapers.25pp.com/20131024/1646/5268de59020559_900x675.jpg",
-            [self key]:@"http://pica.nipic.com/2007-11-20/2007112022528742_2.jpg",
-            [self key]:@"http://img3.3lian.com/2013/c3/99/d/21.jpg",@"21":@"http://pic1a.nipic.com/2008-10-29/2008102985514980_2.jpg",
-            [self key]:@"http://img1.imgtn.bdimg.com/it/u=2624036228,1691383713&fm=21&gp=0.jpg",
-            [self key]:@"http://android-wallpapers.25pp.com/20140406/1517/5341002601bba5_900x675.jpg",
-            [self key]:@"http://android-wallpapers.25pp.com/20140406/1517/5341002601bba5_900x675.jpg"
-            };
+    NSDictionary *dic = @{
+                          [self key]:@"http://img4.duitang.com/uploads/item/201307/19/20130719142617_aVfTJ.jpeg",
+                          [self key]:@"http://img3.imgtn.bdimg.com/it/u=625926037,4267740504&fm=21&gp=0.jpg",
+                          [self key]:@"http://android-wallpapers.25pp.com/20140321/0905/532b9083025e512_900x675.jpg",
+                          [self key]:@"http://pic21.nipic.com/20120523/6135725_215324580118_2.jpg",
+                          [self key]:@"http://photos.tuchong.com/25331/f/1715842.jpg",
+                          [self key]:@"http://android-wallpapers.25pp.com/20131024/1646/5268de59020559_900x675.jpg",
+                          [self key]:@"http://pica.nipic.com/2007-11-20/2007112022528742_2.jpg",
+                          [self key]:@"http://img3.3lian.com/2013/c3/99/d/21.jpg",@"21":@"http://pic1a.nipic.com/2008-10-29/2008102985514980_2.jpg",
+                          [self key]:@"http://img1.imgtn.bdimg.com/it/u=2624036228,1691383713&fm=21&gp=0.jpg",
+                          [self key]:@"http://android-wallpapers.25pp.com/20140406/1517/5341002601bba5_900x675.jpg",
+                          [self key]:@"http://android-wallpapers.25pp.com/20140406/1517/5341002601bba5_900x675.jpg"
+                       };
     
     [calendarItem loadData:dic];
 }
@@ -73,6 +68,9 @@
 {
     int key = arc4random() % 31;
     return [NSString stringWithFormat:@"%d",key];
+}
+- (IBAction)todayAction:(UIButton *)sender {
+    [self.calendarView today];
 }
 
 - (IBAction)lastMonthAction:(UIButton *)sender {

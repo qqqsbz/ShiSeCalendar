@@ -26,6 +26,8 @@
 
 - (void)nextMonth;
 
+- (void)today;
+
 @end
 
 

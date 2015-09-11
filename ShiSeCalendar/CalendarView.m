@@ -9,7 +9,7 @@
 #import "CalendarView.h"
 @interface CalendarView()
 
-@property (assign, nonatomic) NSInteger         lastIndex;
+@property (assign, nonatomic) NSInteger  lastIndex;
 
 @end
 
@@ -133,6 +133,23 @@
         if ([self.calendarDelegate respondsToSelector:@selector(calendarViewCurrentDate:)]) {
             [self.calendarDelegate calendarViewCurrentDate:currentDate];
         }
+    } else {
+        NSDate *date = [NSDate date];
+        CalendarItem *firstItem     = [self.subviews objectAtIndex:0];
+        CalendarItem *secondItem    = [self.subviews objectAtIndex:1];
+        CalendarItem *thirdItem     = [self.subviews objectAtIndex:2];
+        
+        secondItem.date = date;
+        firstItem.date  = [secondItem lastMonth:date];
+        thirdItem.date  = [secondItem nextMonth:date];
+        
+        [self loadData:firstItem];
+        [self loadData:secondItem];
+        [self loadData:thirdItem];
+        
+        if ([self.calendarDelegate respondsToSelector:@selector(calendarViewCurrentDate:)]) {
+            [self.calendarDelegate calendarViewCurrentDate:date];
+        }
     }
     
 }
@@ -150,6 +167,13 @@
     self.contentOffset = CGPointMake(item.frame.origin.x, item.frame.origin.y);
     [self scrollViewDidEndDecelerating:self];
     
+}
+
+- (void)today
+{
+    CalendarItem *item = [self.subviews objectAtIndex:1];
+    self.contentOffset = CGPointMake(item.frame.origin.x, item.frame.origin.y);
+    [self scrollViewDidEndDecelerating:self];
 }
 
 - (void)loadData:(CalendarItem *)item
